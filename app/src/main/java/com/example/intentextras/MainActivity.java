@@ -32,9 +32,13 @@ public class MainActivity extends AppCompatActivity {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent= new Intent(getBaseContext(),ReceiverActivity.class);
-                myIntent.putExtra("Value1",9);
-                myIntent.putExtra("Value2",10);
+//                Intent myIntent= new Intent(getBaseContext(),ReceiverActivity.class);
+//                myIntent.putExtra("Value1",9);
+//                myIntent.putExtra("Value2",10);
+//                startActivity(myIntent);
+
+                Intent myIntent = new Intent(MainActivity.this, ReceiverActivity.class);
+                myIntent.putExtra("intVariableName", 20);
                 startActivity(myIntent);
             }
         });

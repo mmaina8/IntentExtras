@@ -1,5 +1,6 @@
 package com.example.intentextras;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,8 +25,11 @@ public class ReceiverActivity extends AppCompatActivity {
         tvAge = findViewById(R.id.tvAge);
         String savedExtra = getIntent().getStringExtra("Value1");
         tvName.setText(savedExtra);
-        int savedExtraNumber = getIntent().getIntExtra("Value2",89);
-        tvAge.setText(savedExtraNumber);
+//        int savedExtraNumber = getIntent().getIntExtra("Value2",89);
+//        tvAge.setText(savedExtraNumber);
+
+        Intent mIntent = getIntent();
+        int intValue = mIntent.getIntExtra("intVariableName", 0);
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
