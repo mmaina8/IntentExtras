@@ -29,13 +29,13 @@
         <TextView
             android:id="@+id/tvName"
             android:layout_width="match_parent"
-            android:text="Name"
+            android:hint="name"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/tvAge"
-            android:text="Age"
+            android:hint="age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"/>

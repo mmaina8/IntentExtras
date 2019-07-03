@@ -23,13 +23,13 @@ public class ReceiverActivity extends AppCompatActivity {
 
         tvName = findViewById(R.id.tvName);
         tvAge = findViewById(R.id.tvAge);
-        String savedExtra = getIntent().getStringExtra("Value1");
+        String savedExtra = getIntent().getStringExtra("name");
         tvName.setText(savedExtra);
 //        int savedExtraNumber = getIntent().getIntExtra("Value2",89);
 //        tvAge.setText(savedExtraNumber);
 
         Intent mIntent = getIntent();
-        int intValue = mIntent.getIntExtra("intVariableName", 0);
+        int tvAge = mIntent.getIntExtra("age", 0);
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
