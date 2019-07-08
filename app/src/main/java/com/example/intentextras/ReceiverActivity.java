@@ -13,6 +13,8 @@ public class ReceiverActivity extends AppCompatActivity {
 
     TextView tvName;
     TextView tvAge;
+    String name;
+    String age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +25,15 @@ public class ReceiverActivity extends AppCompatActivity {
 
         tvName = findViewById(R.id.tvName);
         tvAge = findViewById(R.id.tvAge);
-        String savedExtra = getIntent().getStringExtra("name");
-        tvName.setText(savedExtra);
-//        int savedExtraNumber = getIntent().getIntExtra("Value2",89);
-//        tvAge.setText(savedExtraNumber);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String name = extras.getString("etName");
+            String age = extras.getString("etAge");
+            tvName.setText(name);
+            tvAge.setText(age);
+        }
 
-        Intent mIntent = getIntent();
-        int tvAge = mIntent.getIntExtra("age", 0);
+
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {

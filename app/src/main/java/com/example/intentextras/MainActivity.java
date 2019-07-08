@@ -25,16 +25,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        etName=findViewById(R.id.etName);
-        etAge=findViewById(R.id.etAge);
         btnSend=findViewById(R.id.btnSend);
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                etName=findViewById(R.id.etName);
+                etAge=findViewById(R.id.etAge);
                 Intent myIntent= new Intent(getBaseContext(),ReceiverActivity.class);
-                myIntent.putExtra("name",etName.getText().toString());
-                myIntent.putExtra("age",Integer.parseInt(etAge.getText().toString()));
+                String name = etName.getText().toString();
+                String age = etAge.getText().toString();
+                myIntent.putExtra("etName",name);
+                myIntent.putExtra("etAge",age);
                 startActivity(myIntent);
 
 //                Intent myIntent = new Intent(MainActivity.this, ReceiverActivity.class);
